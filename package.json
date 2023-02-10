@@ -1,0 +1,48 @@
+{
+  "name": "@kanjianmusic/fn",
+  "version": "0.1.0-beta",
+  "scripts": {
+    "build": "vite build && tsc --build tsconfig.build.json",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "commit": "git-cz",
+    "prepare": "husky install"
+  },
+  "main": "./lib/index.cjs.js",
+  "module": "./lib/index.es.js",
+  "unpkg": "./lib/index.min.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@vitest/coverage-c8": "^0.28.4",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "vite": "^4.0.4",
+    "vitest": "^0.28.4",
+    "vue": "^3.2.45"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  }
+}
