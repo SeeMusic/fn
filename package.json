@@ -2,6 +2,7 @@
   "name": "@kanjianmusic/fn",
   "version": "0.1.0-beta.3",
   "scripts": {
+    "doc": "vitepress dev docs",
     "build": "vite build && pnpm dts",
     "dts": "dts-bundle-generator -o lib/index.d.ts ./packages/index.ts --no-check --project ./tsconfig.build.json",
     "test": "vitest",
@@ -32,6 +33,7 @@
     "dts-bundle-generator": "^7.2.0",
     "husky": "^8.0.3",
     "vite": "^4.0.4",
+    "vitepress": "1.0.0-alpha.45",
     "vitest": "^0.28.4",
     "vue": "^3.2.45"
   },
