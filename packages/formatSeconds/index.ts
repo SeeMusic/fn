@@ -5,8 +5,8 @@ import padLeadingZero from "../padLeadingZero";
  * @param {number} seconds
  */
 const formatSeconds = (seconds: number): string => {
-  let minute: number | string = padLeadingZero(Math.floor(seconds / 60));
-  let second: number | string = padLeadingZero(Math.floor(seconds % 60));
+  let minute = padLeadingZero(Math.floor(seconds / 60));
+  let second = padLeadingZero(Math.floor(seconds % 60));
 
   return `${minute}:${second}`;
 };

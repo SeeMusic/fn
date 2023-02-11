@@ -1,6 +1,6 @@
 {
   "name": "@kanjianmusic/fn",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "scripts": {
     "build": "vite build && pnpm dts",
     "dts": "dts-bundle-generator -o lib/index.d.ts ./packages/index.ts --no-check --project ./tsconfig.build.json",

@@ -33,7 +33,11 @@ Fn.padLeadingZero(9);
 
 具体业务对象的操作方法，如 `dsp.getLogo()`，不在当前的计划中。
 
-### 命名
+### 函数命名
+1. 如果有约定俗成的方案，则遵循社区方案，如 `nl2br`
+2. 否则，函数名应统一为动词启首， `doSomthing` 的格式
+
+### 参数命名
 函数的参数名，如果原生 JS 有类似场景实现，则遵循原生 JS 的命名，如 ```digits```，即为 [toFixed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 的原生参数名
 
 ### 发布到 npm 的版本号要求
