@@ -1,8 +1,9 @@
 {
   "name": "@kanjianmusic/fn",
-  "version": "0.1.0-beta.3",
+  "version": "0.1.0",
   "scripts": {
     "doc": "vitepress dev docs",
+    "doc:build": "vitepress build docs",
     "build": "vite build && pnpm dts",
     "dts": "dts-bundle-generator -o lib/index.d.ts ./packages/index.ts --no-check --project ./tsconfig.build.json",
     "test": "vitest",

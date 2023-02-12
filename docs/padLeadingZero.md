@@ -9,5 +9,5 @@ import { padLeadingZero } from '@kanjianmusic/fn';
 
 const time = 9;
 
-padLeadingZero(time.value) // 09
+padLeadingZero(time) // 09
 ```

@@ -8,5 +8,5 @@ import { nl2br } from '@kanjianmusic/fn';
 
 const content = 'abc\ndef';
 
-nl2br(content.value) // 'abc<br>def'
+nl2br(content) // 'abc<br>def'
 ```
