@@ -8,10 +8,10 @@ describe('util / formatEmptyText', () => {
   })
 
   it('传入null', () => {
-    expect(formatEmptyText(null, '-')).toBe('-')
+    expect(formatEmptyText(null, '*')).toBe('*')
   })
 
   it('传入undefined', () => {
-    expect(formatEmptyText(undefined, '-')).toBe('-')
+    expect(formatEmptyText(undefined, '*')).toBe('*')
   })
 })
