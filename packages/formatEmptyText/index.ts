@@ -2,8 +2,8 @@ import type { EmptyTextOriginValueType } from './typing';
 
 /**
  * 格式化空文本
- * @param {any} value 原始值
- * @param {string} placeholder 占位符
+ * @param { EmptyTextOriginValueType } value 原始值
+ * @param { string } placeholder 占位符
  *
  * @example '' => '-'
  */
