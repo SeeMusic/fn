@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
+import { version } from '../../package.json';
 
 export default defineConfig({
   title: 'Fn',
@@ -14,6 +15,9 @@ export default defineConfig({
     nav: [
       {
         text: '函数列表', link: '/padLeadingZero',
+      },
+      {
+        text: version, link: 'https://www.npmjs.com/package/@kanjianmusic/fn',
       },
     ],
     sidebar: {
@@ -43,5 +47,6 @@ export default defineConfig({
     socialLinks: [{
       icon: "github", link: "https://github.com/seemusic/fn"
     }],
+
   }
 });
