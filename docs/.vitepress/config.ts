@@ -34,6 +34,10 @@ export default defineConfig({
           text: 'nl2br',
           link: '/nl2br'
         },
+        {
+          text: 'formatEmptyText',
+          link: '/formatEmptyText'
+        },
       ],
     },
     socialLinks: [{
