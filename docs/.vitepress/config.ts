@@ -42,6 +42,10 @@ export default defineConfig({
           text: 'formatEmptyText',
           link: '/formatEmptyText'
         },
+        {
+          text: 'commaNumber',
+          link: '/commaNumber'
+        },
       ],
     },
     socialLinks: [{

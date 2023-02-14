@@ -3,6 +3,7 @@ import formatEmptyText from './formatEmptyText';
 import formatSeconds from './formatSeconds';
 import formatLrcTimeTag from './formatLrcTimeTag';
 import nl2br from './nl2br';
+import commaNumber from './commaNumber';
 
 export {
   formatEmptyText,
@@ -10,4 +11,5 @@ export {
   formatSeconds,
   nl2br,
   padLeadingZero,
+  commaNumber,
 };
