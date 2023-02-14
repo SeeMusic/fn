@@ -8,13 +8,15 @@
  * 1.23456789 => '1.23456789'
  */
 const commaNumber = (number: number): string=> {
-  const numberString = `${number}`;
+  let [integer, fraction] = number.toString().split('.');
 
-  if (numberString.includes('.')) {
-    return numberString;
+  integer = integer.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  if (fraction) {
+    return `${integer}.${fraction}`;
   }
 
-  return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return integer;
 }
 
 export default commaNumber;

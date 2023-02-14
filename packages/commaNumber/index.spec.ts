@@ -5,6 +5,7 @@ import commaNumber from './index';
 describe('util / commaNumber', () => {
   it('小数', () => {
     expect(commaNumber(1.23456789)).toBe('1.23456789')
+    expect(commaNumber(1234.56789)).toBe('1,234.56789')
   })
 
   it('整数', () => {
@@ -19,6 +20,7 @@ describe('util / commaNumber', () => {
 
   it('负数', () => {
     expect(commaNumber(-12345678)).toBe('-12,345,678')
+    expect(commaNumber(-1234.56789)).toBe('-1,234.56789')
     expect(commaNumber(-1.23456789)).toBe('-1.23456789')
   })
 })
