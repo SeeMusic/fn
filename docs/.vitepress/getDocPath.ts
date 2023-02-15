@@ -2,7 +2,6 @@
  * 获取目录下的所有文件的相对路径
  * 解决路由名称枚举问题
  */
-
 const fs = require('fs');
 const path = require('path');
 
@@ -14,7 +13,7 @@ const getDocPath = () => {
     link: string,
   }[] = [];
   // 排除检查的文件
-  var excludes = ['index', 'README']
+  const excludes = ['index', 'README']
 
   const arr = files.map(item => item.split('.')[0]).sort(function(a, b) {
     // 截取'.'之前的数字进行排序 例如 1.md 2.md 3.md
@@ -23,7 +22,7 @@ const getDocPath = () => {
 
   arr.forEach((item: string) => {
     if (item && !excludes.includes(item)) {
-      let stat = fs.lstatSync(absolutePath + item + '.md');
+      const stat = fs.lstatSync(absolutePath + item + '.md');
 
       if (!stat.isDirectory()) {
         components.push({
@@ -36,4 +35,5 @@ const getDocPath = () => {
 
   return components;
 }
+
 export default getDocPath;
