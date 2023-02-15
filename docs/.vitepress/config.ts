@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { version } from '../../package.json';
+import sidebarConf from './sidebarConf';
 
 export default defineConfig({
   title: 'Fn',
@@ -20,34 +21,7 @@ export default defineConfig({
         text: version, link: 'https://www.npmjs.com/package/@kanjianmusic/fn',
       },
     ],
-    sidebar: {
-      "/": [
-        {
-          text: 'padLeadingZero',
-          link: '/padLeadingZero'
-        },
-        {
-          text: 'formatSeconds',
-          link: '/formatSeconds'
-        },
-        {
-          text: 'formatLrcTimeTag',
-          link: '/formatLrcTimeTag'
-        },
-        {
-          text: 'nl2br',
-          link: '/nl2br'
-        },
-        {
-          text: 'formatEmptyText',
-          link: '/formatEmptyText'
-        },
-        {
-          text: 'commaNumber',
-          link: '/commaNumber'
-        },
-      ],
-    },
+    sidebar: sidebarConf,
     socialLinks: [{
       icon: "github", link: "https://github.com/seemusic/fn"
     }],
