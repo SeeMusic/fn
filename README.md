@@ -27,6 +27,10 @@ Fn.padLeadingZero(9);
 
 ## 开发相关
 
+### plop 脚手架
+运行 `pnpm plop` 可以交互式创建函数模版，需要填入函数名（必填）和描述（选填）
+
+
 ### 边界
 当前阶段，此函数库只包含工具化的函数，如 `formatSeconds()` 只是为了把 `audio.duration` 转为 `01:02` 的格式显示。
 某种意义上，更像 Vue2 时的 filter。
