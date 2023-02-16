@@ -9,3 +9,6 @@ tsconfig*.json
 index.html
 *.config.*
 *.yaml
+
+plop-templates/
+plopfile.mjs
