@@ -48,7 +48,7 @@ export default function (plop) {
         type: 'modify',
         path: 'packages/index.ts',
         pattern: /(\/\/ EXPORT_PLACEHOLDER--DO_NOT_REMOVE)/g,
-        template: '{{name}},\n$1',
+        template: '{{name}},\n  $1',
         type: 'modify',
       },
     ]
