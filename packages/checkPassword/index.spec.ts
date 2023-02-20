@@ -4,15 +4,15 @@ import checkPassword from './index';
 
 describe('checkPassword', () => {
   it('不符合密码规则', () => {
-    expect(checkPassword('kanjian'), '^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$').toBe(false);
+    expect(checkPassword('kanjian', /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/)).toBe(false);
   })
 
   it('大于最长长度', () => {
-    expect(checkPassword('kanjian1234', '^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$')).toBe(false);
+    expect(checkPassword('kanjian1234', /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/)).toBe(false);
   })
 
   it('小于最短长度', () => {
-    expect(checkPassword('kan12', '^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$')).toBe(false);
+    expect(checkPassword('kan12', /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/)).toBe(false);
   })
 
   it('符合规则', () => {

@@ -8,5 +8,5 @@ import { checkPassword } from '@kanjianmusic/fn';
 
 const password = 'kanjian123';
 
-checkPassword(password, '^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$'); // true
+checkPassword(password, /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/); // true
 ```
