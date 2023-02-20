@@ -1,10 +1,10 @@
 /**
  * 密码规则测试函数
  * @param {string} value 原始值
+ * @param {string} rule 校验规则
  * @param {number} min 最小长度
  * @param {number} max 最大长度
  *
- * @example
  */
 const checkPassword = (
   value: string,
