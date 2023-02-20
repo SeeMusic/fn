@@ -12,7 +12,9 @@ describe('checkPassword', () => {
   })
 
   it('小于最短长度', () => {
-    expect(checkPassword('kan12', /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/)).toBe(false);
+    const rule = new RegExp(/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/);
+
+    expect(checkPassword('kan12', rule)).toBe(false);
   })
 
   it('符合规则', () => {
