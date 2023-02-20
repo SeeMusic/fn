@@ -13,15 +13,14 @@ const checkPassword = (
     min: number,
     max: number,
   } = {
-    rule: '(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]',
+    rule: '',
     min: 6,
     max: 20,
   },
 ) => {
-  console.log(options, 'options');
-
+  const defaultRule = '(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]';
   const PASSWORD_REGEXP = new RegExp(`^${
-    options.rule || '(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]'
+    options.rule || defaultRule
   }{${options.min},${options.max}}$`);
 
   return PASSWORD_REGEXP.test(value);
