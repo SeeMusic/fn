@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
         formats: ['es', 'cjs', 'iife']
       },
       rollupOptions: {
-        external: ['vue']
+        external: ['vue', 'dayjs']
       }
     }
   }

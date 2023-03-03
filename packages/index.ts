@@ -5,6 +5,7 @@ import formatLrcTimeTag from './formatLrcTimeTag';
 import nl2br from './nl2br';
 import commaNumber from './commaNumber';
 import checkPassword from './checkPassword';
+import formatIsoDate from './formatIsoDate';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 
 export {
@@ -15,5 +16,6 @@ export {
   padLeadingZero,
   commaNumber,
   checkPassword,
+  formatIsoDate,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
 };

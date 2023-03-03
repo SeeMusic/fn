@@ -9,6 +9,7 @@ importers:
       '@vitest/coverage-c8': ^0.28.4
       commitizen: ^4.3.0
       cz-conventional-changelog: ^3.3.0
+      dayjs: ^1.11.7
       dts-bundle-generator: ^7.2.0
       husky: ^8.0.3
       plop: ^3.1.2
@@ -22,6 +23,7 @@ importers:
       '@vitest/coverage-c8': 0.28.4
       commitizen: 4.3.0
       cz-conventional-changelog: 3.3.0
+      dayjs: 1.11.7
       dts-bundle-generator: 7.2.0
       husky: 8.0.3
       plop: 3.1.2
@@ -1445,6 +1447,10 @@ packages:
   /dargs/7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
     engines: {node: '>=8'}
+    dev: true
+
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
     dev: true
 
   /debug/4.3.4:

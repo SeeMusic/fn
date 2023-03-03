@@ -1,6 +1,6 @@
 {
   "name": "@kanjianmusic/fn",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "看见音乐公共函数库",
   "scripts": {
     "doc": "vitepress dev docs",
@@ -27,12 +27,16 @@
   "engines": {
     "node": ">=16.14.0"
   },
+  "peerDependencies": {
+    "dayjs": "^1.11.7"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@vitest/coverage-c8": "^0.28.4",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "dayjs": "^1.11.7",
     "dts-bundle-generator": "^7.2.0",
     "husky": "^8.0.3",
     "plop": "^3.1.2",
