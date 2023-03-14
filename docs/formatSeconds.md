@@ -4,9 +4,9 @@
 ## 使用方法
 
 ```ts
-import { formatDuration } from '@kanjianmusic/fn';
+import { formatSeconds } from '@kanjianmusic/fn';
 
 const duration = 120;
 
-formatDuration(duration) // '02:00'
+formatSeconds(duration) // '02:00'
 ```
