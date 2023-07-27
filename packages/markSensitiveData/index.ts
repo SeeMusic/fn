@@ -1,6 +1,12 @@
 
-type PresetType = '' | 'email';
-type ConfigType = { left: number; right: number };
+type PresetType = 'email';
+
+interface MaskOption {
+  headRetainCharCount: number
+  tailRetainCharCount: number
+  preset?: PresetType
+  placeholder?: string
+}
 
 /**
  * 拼接字符串
@@ -58,57 +64,53 @@ function getTextForpreset(originalText: string, preset?: PresetType) {
 /**
  * 敏感词加密
  * @param {string} originalText - 目标内容
- * @param {number} maskReserve - 保留非加密信息的长度，两边隐藏的长度
- * @param {PresetType} preset - 预设，不需要时可不传或空字符串
- * @param {string} maskChar - 加密内容部分的字符，默认 *
+ * @param {number} maskReserve - 保留非加密信息的长度，两边保留的长度
  */
-function markSensitiveData(originalText: string, maskReserve: number, preset?: PresetType, maskChar?: string): string
+function markSensitiveData(originalText: string, maskReserve: number): string
 /**
  * 敏感词加密
  * @param {string} originalText - 目标内容
- * @param {ConfigType} maskOption - 保留非加密信息的长度，自定义两边隐藏的长度
- * @param {PresetType} preset - 预设，不需要时可不传或空字符串
- * @param {string} maskChar - 加密内容部分的字符，默认 *
+ * @param {MaskOption} maskOption - 保留非加密信息的长度，自定义两边隐藏的长度
  */
-function markSensitiveData(originalText: string, maskOption: ConfigType, preset?: PresetType, maskChar?: string): string
-function markSensitiveData(originalText: string, reserveOrOption: number | ConfigType, preset?: PresetType, maskChar?: string): string {
+function markSensitiveData(originalText: string, maskOption: MaskOption): string
+function markSensitiveData(originalText: string, reserveOrOption: number | MaskOption): string {
   if (!originalText) {
     return originalText;
   }
 
-  const { prefix, content, suffix } = getTextForpreset(originalText, preset);
-  originalText = content;
-
   if (typeof reserveOrOption === 'number') {
     // 总长度 > 目标长度, 总长度为负数,
     if (reserveOrOption * 2 > originalText.length || reserveOrOption < 0) {
-      return concatText(prefix, originalText, suffix);
+      return originalText;
     }
-    return concatText(prefix, formatText(originalText, reserveOrOption, originalText.length - reserveOrOption, maskChar), suffix);
+    return formatText(originalText, reserveOrOption, originalText.length - reserveOrOption);
 
   } else {
-    const { left, right } = reserveOrOption;
-    // 总长度 >= 目标长度, left 和 right 是负数
+    const { headRetainCharCount, tailRetainCharCount, placeholder, preset } = reserveOrOption;
+    const { prefix, content, suffix } = getTextForpreset(originalText, preset);
+
+    originalText = content;
+    // 总长度 >= 目标长度, start 和 end 是负数
     if (
-      left + right > originalText.length
-        || left < 0
-        || right < 0
+      headRetainCharCount + tailRetainCharCount > originalText.length
+        || headRetainCharCount < 0
+        || tailRetainCharCount < 0
     ) {
       return concatText(prefix, originalText, suffix);
     }
 
-    let startIdx = left;
-    let endIdx = originalText.length - right;
+    let startIdx = headRetainCharCount;
+    let endIdx = originalText.length - tailRetainCharCount;
 
     // 都为 0
-    if (!left && !right) {
+    if (!headRetainCharCount && !tailRetainCharCount) {
       startIdx = 0;
       endIdx = originalText.length;
-    } else if (!right) {
+    } else if (!tailRetainCharCount) {
       endIdx = originalText.length
     }
 
-    return concatText(prefix, formatText(originalText, startIdx, endIdx, maskChar), suffix);
+    return concatText(prefix, formatText(originalText, startIdx, endIdx, placeholder), suffix);
   }
 };
 
