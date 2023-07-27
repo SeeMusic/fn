@@ -1,14 +1,14 @@
 # markSensitiveData
-敏感信息加密显示，从第 `n` 个开始，最后保留 `n` 个内容 （头不包含，尾包含）。
+敏感信息加密显示。
 
 ## 用法
 
 ```ts
 import { markSensitiveData } from '@kanjianmusic/fn';
 
-// 从 第 2 位开始，最后保留 2 位
+// 前后保留 2 位
 markSensitiveData('0123456789', 2); // 01******89
-// 从 第 2 位开始，最后保留 3 位
+// 前面保留 2 位，后面保留 3 位
 markSensitiveData('0123456789',
   {
     headRetainCharCount: 2,
@@ -46,9 +46,10 @@ markSensitiveData('0123456789@qq.com',
 ## 类型声明
 
 ```ts
-type PresetType = '' | 'email';
+// 当前仅支持 email
+type PresetType = 'email';
 
-interface MaskOption {
+interface RetainCharOption {
   headRetainCharCount: number
   tailRetainCharCount: number
   preset?: PresetType
@@ -58,7 +59,7 @@ interface MaskOption {
 /**
  * 敏感词加密
  * @param {string} originalText - 目标内容
- * @param {number|MaskOption} reserveOrOption - 字符串两边保留的长度或传入对象自定义配置
+ * @param {number|RetainCharOption} countOrOption - 字符串两边保留的长度或传入对象自定义配置
  */
-export declare function markSensitiveData(originalText: string, reserveOrOption: number | MaskOption): string
+export declare function markSensitiveData(originalText: string, countOrOption: number | MaskOption): string
 ```

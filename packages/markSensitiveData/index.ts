@@ -1,7 +1,7 @@
-
+// 当前仅支持 email
 type PresetType = 'email';
 
-interface MaskOption {
+interface RetainCharOption {
   headRetainCharCount: number
   tailRetainCharCount: number
   preset?: PresetType
@@ -64,29 +64,29 @@ function getTextForpreset(originalText: string, preset?: PresetType) {
 /**
  * 敏感词加密
  * @param {string} originalText - 目标内容
- * @param {number} maskReserve - 保留非加密信息的长度，两边保留的长度
+ * @param {number} retainCharCount - 保留非加密信息的长度，两边保留的长度
  */
-function markSensitiveData(originalText: string, maskReserve: number): string
+function markSensitiveData(originalText: string, retainCharCount: number): string
 /**
  * 敏感词加密
  * @param {string} originalText - 目标内容
- * @param {MaskOption} maskOption - 保留非加密信息的长度，自定义两边隐藏的长度
+ * @param {RetainCharOption} retainCharOption - 保留非加密信息的长度，自定义两边隐藏的长度
  */
-function markSensitiveData(originalText: string, maskOption: MaskOption): string
-function markSensitiveData(originalText: string, reserveOrOption: number | MaskOption): string {
+function markSensitiveData(originalText: string, retainCharOption: RetainCharOption): string
+function markSensitiveData(originalText: string, countOrOption: number | RetainCharOption): string {
   if (!originalText) {
     return originalText;
   }
 
-  if (typeof reserveOrOption === 'number') {
+  if (typeof countOrOption === 'number') {
     // 总长度 > 目标长度, 总长度为负数,
-    if (reserveOrOption * 2 > originalText.length || reserveOrOption < 0) {
+    if (countOrOption * 2 > originalText.length || countOrOption < 0) {
       return originalText;
     }
-    return formatText(originalText, reserveOrOption, originalText.length - reserveOrOption);
+    return formatText(originalText, countOrOption, originalText.length - countOrOption);
 
   } else {
-    const { headRetainCharCount, tailRetainCharCount, placeholder, preset } = reserveOrOption;
+    const { headRetainCharCount, tailRetainCharCount, placeholder, preset } = countOrOption;
     const { prefix, content, suffix } = getTextForpreset(originalText, preset);
 
     originalText = content;
