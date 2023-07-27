@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 
 import checkPassword from './index';
 
-describe('checkPassword', () => {
+describe('util / checkPassword', () => {
   it('不符合密码规则', () => {
     expect(checkPassword('kanjian', /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/)).toBe(false);
   })
