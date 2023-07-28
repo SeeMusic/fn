@@ -6,7 +6,7 @@
  */
 const checkPassword = (
   value: string,
-  rule: RegExp = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/,
+  rule: RegExp = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/
 ) => {
   return rule.test(value);
 };

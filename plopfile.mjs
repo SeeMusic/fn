@@ -13,13 +13,13 @@ export default function (plop) {
           }
 
           return true;
-        },
+        }
       },
       {
         type: 'input',
         name: 'description',
-        message: '一句话描述',
-      },
+        message: '一句话描述'
+      }
 		],
 		actions: [
       // Create SourceCode and Unit Test
@@ -41,7 +41,7 @@ export default function (plop) {
         path: 'packages/index.ts',
         pattern: /(\/\/ IMPORT_PLACEHOLDER--DO_NOT_REMOVE)/g,
         template: 'import {{name}} from \'./{{name}}\';\n$1',
-        type: 'modify',
+        type: 'modify'
       },
       // export newFn
       {
@@ -49,8 +49,8 @@ export default function (plop) {
         path: 'packages/index.ts',
         pattern: /(\/\/ EXPORT_PLACEHOLDER--DO_NOT_REMOVE)/g,
         template: '{{name}},\n  $1',
-        type: 'modify',
-      },
+        type: 'modify'
+      }
     ]
 	});
-};
+}

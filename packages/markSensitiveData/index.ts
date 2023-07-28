@@ -35,18 +35,18 @@ function getTextForpreset(originalText: string, preset?: PresetType) {
     content: originalText,
     prefix: '',
     suffix: ''
-  }
+  };
   if (preset) {
     const presets = [
       {
         preset: 'email',
-        validator: (val: string) => /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/.test(val)
+        validator: (val: string) => /^[\w\\.-]+@[a-zA-Z\d\\.-]+\.[a-zA-Z]{2,}$/.test(val)
       }
     ];
 
-    for (let item of presets) {
+    for (const item of presets) {
       if (item.preset === preset && item.validator(originalText)) {
-        const reg = /@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+        const reg = /@[a-zA-Z\d\\.-]+\.[a-zA-Z]{2,}$/;
 
         extract.suffix = (originalText.match(reg) || [''])[0];
         extract.content = originalText.replace(extract.suffix, '');
@@ -93,8 +93,8 @@ function markSensitiveData(originalText: string, countOrOption: number | RetainC
     // 总长度 >= 目标长度, start 和 end 是负数
     if (
       headRetainCharCount + tailRetainCharCount > originalText.length
-        || headRetainCharCount < 0
-        || tailRetainCharCount < 0
+      || headRetainCharCount < 0
+      || tailRetainCharCount < 0
     ) {
       return concatText(prefix, originalText, suffix);
     }
@@ -107,11 +107,11 @@ function markSensitiveData(originalText: string, countOrOption: number | RetainC
       startIdx = 0;
       endIdx = originalText.length;
     } else if (!tailRetainCharCount) {
-      endIdx = originalText.length
+      endIdx = originalText.length;
     }
 
     return concatText(prefix, formatText(originalText, startIdx, endIdx, placeholder), suffix);
   }
-};
+}
 
 export default markSensitiveData;

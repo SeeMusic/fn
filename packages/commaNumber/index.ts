@@ -8,6 +8,7 @@
  * 1.23456789 => '1.23456789'
  */
 const commaNumber = (number: number): string=> {
+  // eslint-disable-next-line prefer-const
   let [integer, fraction] = number.toString().split('.');
 
   integer = integer.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -17,6 +18,6 @@ const commaNumber = (number: number): string=> {
   }
 
   return integer;
-}
+};
 
 export default commaNumber;

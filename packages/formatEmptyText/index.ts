@@ -12,6 +12,6 @@ const formatEmptyText = (value: EmptyTextOriginValueType, placeholder: string = 
   const isEmpty = [null, '', undefined].includes(value);
 
   return isEmpty ? placeholder : value;
-}
+};
 
 export default formatEmptyText;

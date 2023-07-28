@@ -4,6 +4,6 @@
  */
 const padLeadingZero = (sourceNumber: number): string => {
   return sourceNumber < 10 ? `0${sourceNumber}` : `${sourceNumber}`;
-}
+};
 
 export default padLeadingZero;

@@ -4,8 +4,8 @@ import type { LrcTimeTagOption } from './typing';
 // 默认选项
 const defaultOptions: LrcTimeTagOption = {
   type: 'line',
-  digits: 2,
-}
+  digits: 2
+};
 
 /**
  * 格式化 LRC 歌词的 Line Time Tag

@@ -4,14 +4,14 @@ import formatEmptyText from './index';
 
 describe('util / formatEmptyText', () => {
   it('传入空字符串', () => {
-    expect(formatEmptyText('')).toBe('-')
-  })
+    expect(formatEmptyText('')).toBe('-');
+  });
 
   it('传入null', () => {
-    expect(formatEmptyText(null, '*')).toBe('*')
-  })
+    expect(formatEmptyText(null, '*')).toBe('*');
+  });
 
   it('传入undefined', () => {
-    expect(formatEmptyText(undefined, '*')).toBe('*')
-  })
-})
+    expect(formatEmptyText(undefined, '*')).toBe('*');
+  });
+});
