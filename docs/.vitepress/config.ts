@@ -20,6 +20,17 @@ export default defineConfig({
       {
         text: version, link: 'https://www.npmjs.com/package/@kanjianmusic/fn',
       },
+      {
+        text: 'Link',
+        items: [
+          {
+            text: 'Sop 组件库', link: "https://chords-ui.seemusic.xyz",
+          },
+          {
+            text: 'F2E 文档站点', link: 'https://f2e.seemusic.xyz/'
+          }
+        ]
+      },
     ],
     sidebar: sidebarConf,
     socialLinks: [{
