@@ -10,6 +10,9 @@ import formatIsoDate from './formatIsoDate';
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
 
+export * from './is';
+export { getNotEmptyParams } from './getNotEmptyParams'
+
 export {
   formatEmptyText,
   formatLrcTimeTag,
@@ -21,5 +24,5 @@ export {
   formatIsoDate,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
-  checkEmail,
+  checkEmail
 };
