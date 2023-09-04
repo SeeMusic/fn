@@ -25,6 +25,15 @@ module.exports = {
     // Basic
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'comma-dangle': ['error', 'never']
+    'comma-dangle': ['error', 'never'],
+    'object-curly-spacing': ['error','always'],
+    'keyword-spacing': [ 
+      'error', {
+        before: true,
+        after: true
+      }
+    ],
+    'eol-last': ['error', 'always'],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }]
   }
 };

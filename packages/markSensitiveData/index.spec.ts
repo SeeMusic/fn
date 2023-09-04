@@ -23,7 +23,6 @@ describe('util / markSensitiveData', () => {
     expect(markSensitiveData('0123456789', 5)).toBe('0123456789');
   });
 
-
   it('自定义字符串保留个数： 前后保留 0 位', () => {
     expect(markSensitiveData('0123456789', { headRetainCharCount: 0, tailRetainCharCount: 0 })).toBe('**********');
   });

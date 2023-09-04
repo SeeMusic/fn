@@ -59,8 +59,6 @@ function getTextForpreset(originalText: string, preset?: PresetType) {
   return extract;
 }
 
-
-
 /**
  * 敏感词加密
  * @param {string} originalText - 目标内容

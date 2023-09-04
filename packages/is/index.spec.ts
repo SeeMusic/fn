@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
-import {getType, isString, isNumber, isStringNumber, isObject, isUndefined, isNull, isEmpty} from './index';
+import objectIs from './index';
+const { getType, isString, isNumber, isStringNumber, isObject, isUndefined, isNull, isEmpty }  = objectIs;
 
 describe('is', () => {
   it('getType', () => {
@@ -61,7 +62,7 @@ describe('is', () => {
 
   it('isEmpty', () => {
     expect(isEmpty({})).toBe(true);
-    expect(isEmpty({foo: 'foo'})).toBe(false);
+    expect(isEmpty({ foo: 'foo' })).toBe(false);
     expect(isEmpty([])).toBe(true);
     expect(isEmpty(['foo'])).toBe(false);
     expect(isEmpty('')).toBe(true);
@@ -70,4 +71,4 @@ describe('is', () => {
     expect(isEmpty(null)).toBe(true);
     expect(isEmpty(undefined)).toBe(true);
   });
-})
+});

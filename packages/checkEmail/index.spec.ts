@@ -19,4 +19,4 @@ describe('checkEmail', () => {
     expect(checkEmail('zhangsan@kanjian.com', /^[a-zA-Z0-9]+@([a-zA-Z0-9]+\.)+com$/)).toBe(true);
     expect(checkEmail('zhangsan@kanjian.cn', /^[a-zA-Z0-9]+@([a-zA-Z0-9]+\.)+com$/)).toBe(false);
   });
-})
+});

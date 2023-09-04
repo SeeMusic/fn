@@ -7,7 +7,7 @@
  */
 const checkPhoneNumber = (value: string, rule?: RegExp) => {
   const mobileRule = /^((\+?86)|(\(\+86\)))?1[3-9]([0-9]{9})$/;
-  const TelPhoneRule = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}$/
+  const TelPhoneRule = /^((\+?86)|(\(\+86\)))?\d{3,4}-\d{7,8}$/;
   if (rule) {
     return rule.test(value);
   }
