@@ -8,6 +8,11 @@ import checkPassword from './checkPassword';
 import formatIsoDate from './formatIsoDate';
 import markSensitiveData from './markSensitiveData';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
+import checkPhoneNumber from './checkPhoneNumber';
+import checkEmail from './checkEmail';
+
+export * from './is';
+export { getNotEmptyParams } from './getNotEmptyParams'
 
 export {
   formatEmptyText,
@@ -20,4 +25,6 @@ export {
   formatIsoDate,
   markSensitiveData
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
+  checkPhoneNumber,
+  checkEmail
 };
