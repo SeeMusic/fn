@@ -11,7 +11,7 @@ import filterEmptyParams from './filterEmptyParams';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
-import objectIs from './is';
+import objectIs from './objectIs';
 
 export {
   formatEmptyText,
