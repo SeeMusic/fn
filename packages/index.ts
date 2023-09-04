@@ -7,6 +7,8 @@ import commaNumber from './commaNumber';
 import checkPassword from './checkPassword';
 import formatIsoDate from './formatIsoDate';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
+import checkPhoneNumber from './checkPhoneNumber';
+import checkEmail from './checkEmail';
 
 export {
   formatEmptyText,
@@ -18,4 +20,6 @@ export {
   checkPassword,
   formatIsoDate,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
+  checkPhoneNumber,
+  checkEmail,
 };
