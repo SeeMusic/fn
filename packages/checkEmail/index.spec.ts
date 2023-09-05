@@ -10,12 +10,18 @@ describe('checkEmail', () => {
     expect(checkEmail('zhang.san@kanjian.com')).toBe(true);
     expect(checkEmail('zhangsan-@kanjian.com')).toBe(false);
     expect(checkEmail('zhang-san@kanjian.cn')).toBe(true);
+    expect(checkEmail('zhang_san@kanjian.cn')).toBe(true);
     expect(checkEmail('zhang--san@kanjian.cn')).toBe(false);
+    expect(checkEmail('zhang*san@kanjian.cn')).toBe(false);
+    expect(checkEmail('zhang/san@kanjian.cn')).toBe(false);
+    // eslint-disable-next-line no-useless-escape
+    expect(checkEmail('zhang\\san@kanjian.cn')).toBe(false);
     expect(checkEmail('zhangsankanjian.com')).toBe(false);
     expect(checkEmail('zhangsan@kanjiancom')).toBe(false);
     expect(checkEmail('zhangsan@.com')).toBe(false);
     expect(checkEmail('zhangsan@kanjian.c')).toBe(false);
     expect(checkEmail('zhangsan@.comcom')).toBe(false);
+    expect(checkEmail('zhangsan@kanjian.online')).toBe(true);
 
     expect(checkEmail('zhangsan+@kanjian.com')).toBe(false);
     expect(checkEmail('zhangsan+a@kanjian.com')).toBe(true);
