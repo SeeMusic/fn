@@ -6,10 +6,13 @@
 ```ts
 import { checkEmail } from '@kanjianmusic/fn';
 
-// 默认校验规则 /^[a-zA-Z0-9]+([-_.][A-Za-zd]+)*@([a-zA-Z0-9]+\.)+[A-Za-zd]{2,5}$/
+// 默认校验规则 /^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+\.)+[A-Za-zd]{2,5}$/
 checkEmail('zhangsan@kanjian.com'); // true
 checkEmail('zhang-san@kanjian.com'); // true
-checkEmail('zhangsan-@kanjian.com'); // false
+checkEmail('zhang--san@kanjian.com'); // false
+checkEmail('zhangsan+1@kanjian.com'); // true
+checkEmail('zhangsan+@kanjian.com'); // false
+checkEmail('zhangsan@kanjian+.com'); // false
 
 // 自定义规则
 checkEmail('zhangsan@kanjian.com', /^[a-zA-Z0-9]+@([a-zA-Z0-9]+\.)+com$/) // true

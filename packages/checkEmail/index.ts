@@ -3,7 +3,7 @@
  * @param {string} value 邮箱
  * @param {RegExp} rule 自定义校验规则
  */
-const checkEmail = (value: string, rule = /^[a-zA-Z0-9]+([-_.][A-Za-zd]+)*@([a-zA-Z0-9]+\.)+[A-Za-zd]{2,5}$/) => {
+const checkEmail = (value: string, rule = /^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+\.)+[A-Za-zd]{2,5}$/) => {
   return rule.test(value);
 };
 
