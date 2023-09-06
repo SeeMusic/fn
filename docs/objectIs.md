@@ -15,8 +15,7 @@
 返回参数类型
 
 ```ts
-import { objectIs } from '@kanjianmusic/fn';
-const { getType }  = objectIs;
+import { getType } from '@kanjianmusic/fn';
 
 getType('foo'); // String
 getType(0); // Number
@@ -34,8 +33,7 @@ getType((new Date())); // Date
 是否是字符串
 
 ```ts
-import { objectIs } from '@kanjianmusic/fn';
-const { isString }  = objectIs;
+import { isString } from '@kanjianmusic/fn';
 
 isString('foo'); // true
 ```
@@ -44,8 +42,7 @@ isString('foo'); // true
 是否是数字类型
 
 ```ts
-import { objectIs } from '@kanjianmusic/fn';
-const { isNumber }  = objectIs;
+import { isNumber } from '@kanjianmusic/fn';
 
 isNumber(-1); // true
 isNumber(NaN); // true
@@ -55,8 +52,7 @@ isNumber(NaN); // true
 是否是数字字符串
 
 ```ts
-import { objectIs } from '@kanjianmusic/fn';
-const { isStringNumber }  = objectIs;
+import { isStringNumber } from '@kanjianmusic/fn';
 
 isStringNumber('-1'); // true
 isStringNumber('NaN'); // false
@@ -67,8 +63,7 @@ isStringNumber('100a'); // false
 是否是对象类型
 
 ```ts
-import { objectIs } from '@kanjianmusic/fn';
-const { isObject }  = objectIs;
+import { isObject } from '@kanjianmusic/fn';
 
 isObject({}); // true
 ```
@@ -77,8 +72,7 @@ isObject({}); // true
 是否是undefined
 
 ```ts
-import { objectIs } from '@kanjianmusic/fn';
-const { isUndefined }  = objectIs;
+import { isUndefined } from '@kanjianmusic/fn';
 
 isUndefined(undefined); // true
 ```
@@ -87,8 +81,7 @@ isUndefined(undefined); // true
 是否是null
 
 ```ts
-import { objectIs } from '@kanjianmusic/fn';
-const { isNull }  = objectIs;
+import { isNull } from '@kanjianmusic/fn';
 
 isNull(null); // true
 ```

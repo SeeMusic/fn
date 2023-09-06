@@ -1,7 +1,5 @@
 import { describe, it, expect } from 'vitest';
 
-// import objectIs from './index';
-// const { getType, isString, isNumber, isStringNumber, isObject, isUndefined, isNull, isEmpty }  = objectIs;
 import { getType, isString, isNumber, isStringNumber, isObject, isUndefined, isNull, isEmpty } from '.';
 
 describe('is', () => {
