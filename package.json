@@ -1,6 +1,6 @@
 {
   "name": "@kanjianmusic/fn",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "看见音乐公共函数库",
   "scripts": {
     "doc": "vitepress dev docs",

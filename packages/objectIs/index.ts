@@ -47,7 +47,7 @@ function isEmpty(val: unknown) {
   return res;
 }
 
-export default {
+export {
   getType,
   isString,
   isNumber,

@@ -8,10 +8,20 @@ import checkPassword from './checkPassword';
 import formatIsoDate from './formatIsoDate';
 import markSensitiveData from './markSensitiveData';
 import filterEmptyParams from './filterEmptyParams';
+import getAncestorsByTreeItem from './getAncestorsByTreeItem';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
-import objectIs from './objectIs';
+import {
+  getType,
+  isString,
+  isNumber,
+  isStringNumber,
+  isObject,
+  isUndefined,
+  isNull,
+  isEmpty
+} from './objectIs';
 
 export {
   formatEmptyText,
@@ -24,8 +34,17 @@ export {
   formatIsoDate,
   markSensitiveData,
   filterEmptyParams,
+  getAncestorsByTreeItem,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
   checkEmail,
-  objectIs
+
+  getType,
+  isString,
+  isNumber,
+  isStringNumber,
+  isObject,
+  isUndefined,
+  isNull,
+  isEmpty
 };

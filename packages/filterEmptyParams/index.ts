@@ -1,5 +1,5 @@
-import { objectIs } from '..';
-const { isString, isObject, isUndefined, isNull, isEmpty }  = objectIs;
+import { isString, isObject, isUndefined, isNull, isEmpty } from '..';
+
 /**
  * axios空值参数过滤(只过滤第一层)
  * @param params 参数对象
