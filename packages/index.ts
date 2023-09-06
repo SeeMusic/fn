@@ -8,7 +8,7 @@ import checkPassword from './checkPassword';
 import formatIsoDate from './formatIsoDate';
 import markSensitiveData from './markSensitiveData';
 import filterEmptyParams from './filterEmptyParams';
-import getAncestorsByTreeItem from './getAncestorsByTreeItem';
+import findPath from './findPath';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
@@ -34,7 +34,7 @@ export {
   formatIsoDate,
   markSensitiveData,
   filterEmptyParams,
-  getAncestorsByTreeItem,
+  findPath,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
   checkEmail,

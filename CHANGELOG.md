@@ -1,9 +1,9 @@
-## [0.7.2](https://github.com/SeeMusic/fn/compare/v0.7.1...v0.7.2) (2023-09-06)
+# [0.8.0](https://github.com/SeeMusic/fn/compare/v0.7.1...v0.8.0) (2023-09-06)
 
 
 ### Features
 
-* getAncestorsByTreeItem 根据指定树节点获取祖先节点, 返回祖先节点按层级组成的数组 ([b811f21](https://github.com/SeeMusic/fn/commit/b811f210cfaa3bd95590ed880a4e17b2f7696f23))
+* 新增 findPath, 根据指定树节点获取祖先节点, 返回祖先节点按层级组成的数组 ([b811f21](https://github.com/SeeMusic/fn/commit/b811f210cfaa3bd95590ed880a4e17b2f7696f23))
 
 
 

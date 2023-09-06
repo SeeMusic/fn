@@ -6,7 +6,7 @@ interface TreeNode {
   [key: string]: TreeChild | string | number;
 }
 
-interface IParams {
+interface Params {
   key: string;
   value: string | number;
   childrenKey: string; 
@@ -26,11 +26,12 @@ const omitChildren = (value: TreeNode, keyOfChildren: keyof TreeNode) => {
 
 /**
  * 根据指定树节点获取祖先节点
- * @param params 
- * @returns
+ * @param params - key: 查找的属性名；value：查找的属性值；childrenKey：children属性名；tree：树节点
+ * @param config - includeCurrentNode：是否包含当前节点
+ * @returns {TreeNode[]}
  */
-const getAncestorsByTreeItem = (params: IParams): TreeNode[] => {
-  const walk = ({ key, value, childrenKey, tree }: IParams, original: boolean): TreeNode[] => {
+const findPath = (params: Params, config?: { includeCurrentNode: boolean }): TreeNode[] => {
+  const walk = ({ key, value, childrenKey, tree }: Params, original: boolean): TreeNode[] => {
     let res: TreeNode[] = [];
     for (let i = 0; i < tree?.length; i++) {
       const current = tree[i];
@@ -56,8 +57,11 @@ const getAncestorsByTreeItem = (params: IParams): TreeNode[] => {
     }
     return res;
   };
-
-  return walk(params, true);
+  const res = walk(params, true);
+  if (config && !config.includeCurrentNode) {
+    res.pop();
+  }
+  return res;
 };
 
-export default getAncestorsByTreeItem;
+export default findPath;
