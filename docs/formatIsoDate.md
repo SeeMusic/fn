@@ -23,4 +23,13 @@ formatIsoDate('2000-01-01T00:00:00Z', 'YYYY.MM.DD HH:mm:ss');
 // => 2000.01.01 17:30:08
 // 一般扔建议数据源统一用 0 时区的 {date}T{time}Z 格式
 formatIsoDate('2000-01-01T17:30:08+08:00', 'YYYY.MM.DD HH:mm:ss');
+
+// 默认占位符
+// => '-'
+formatIsoDate('')
+formatIsoDate(undefined)
+
+// 自定义占位符
+// => '-'
+formatIsoDate('', 'YYYY.MM.DD HH:mm:ss', '/')
 ```

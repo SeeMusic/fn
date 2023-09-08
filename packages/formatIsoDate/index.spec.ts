@@ -23,3 +23,18 @@ describe('formatIsoDate', () => {
     expect(formatIsoDate('2000-01-01T17:30:08+08:00', 'YYYY.MM.DD HH:mm:ss')).toBe('2000.01.01 17:30:08');
   });
 });
+
+describe('formatIsoDate: invalid date', () => {
+  it('empty string', () => {
+    expect(formatIsoDate('')).toBe('-');
+  });
+  it('undefined', () => {
+    expect(formatIsoDate(undefined as unknown as string)).toBe('-');
+  });
+  it('null', () => {
+    expect(formatIsoDate(null as unknown as string)).toBe('-');
+  });
+  it('placeHolder', () => {
+    expect(formatIsoDate('', 'YYYY.MM.DD', '/')).toBe('/');
+  });
+});

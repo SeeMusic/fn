@@ -1,3 +1,12 @@
+## [0.8.1](https://github.com/SeeMusic/fn/compare/v0.8.0...v0.8.1) (2023-09-14)
+
+
+### Bug Fixes
+
+* formatIsoDate参数为空，返回默认值 ([a6d5cb4](https://github.com/SeeMusic/fn/commit/a6d5cb416908804fecbaf8564d55fc685d41ae75))
+
+
+
 # [0.8.0](https://github.com/SeeMusic/fn/compare/v0.7.1...v0.8.0) (2023-09-06)
 
 
