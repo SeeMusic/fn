@@ -11,3 +11,17 @@ describe('media / formatSeconds', () => {
     expect(nl2br('abc\ndef')).toBe('abc<br>def');
   });
 });
+
+describe('empty content', () => {
+  it('empty string', () => {
+    expect(nl2br('')).toBe('-');
+  });
+
+  it('null', () => {
+    expect(nl2br(null)).toBe('-');
+  });
+
+  it('placeholder', () => {
+    expect(nl2br(null, '/')).toBe('/');
+  });
+});

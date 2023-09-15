@@ -11,7 +11,7 @@ import type { EmptyTextOriginValueType } from './typing';
 const formatEmptyText = (value: EmptyTextOriginValueType, placeholder: string = '-') => {
   const isEmpty = [null, '', undefined].includes(value);
 
-  return isEmpty ? placeholder : value;
+  return isEmpty ? placeholder : value as string;
 };
 
 export default formatEmptyText;
