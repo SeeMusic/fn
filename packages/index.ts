@@ -9,6 +9,7 @@ import formatIsoDate from './formatIsoDate';
 import markSensitiveData from './markSensitiveData';
 import filterEmptyParams from './filterEmptyParams';
 import findPath from './findPath';
+import deepEqual from './deepEqual';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
@@ -35,6 +36,7 @@ export {
   markSensitiveData,
   filterEmptyParams,
   findPath,
+  deepEqual,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
   checkEmail,
