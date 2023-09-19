@@ -14,4 +14,11 @@ deepEqual(true, false) // false
 deepEqual(undefined, null) // false
 deepEqual(NaN, NaN); // true
 deepEqual(Symbol('foo'), Symbol('bar')) // false
+
+// 引用类型
+const arg1 = [{ foo: { bar: ['baz'] } }, { bar: 'baz' }];
+const arg2 = [{ foo: { bar: ['baz'] } }, { bar: 'baz' }];
+const arg3 = [{ foo: { bar: ['bar'] } }, { bar: 'baz' }];
+deepEqual(arg1, arg2) // true
+deepEqual(arg1, arg3) // false
 ```

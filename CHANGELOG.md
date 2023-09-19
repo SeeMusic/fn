@@ -12,7 +12,7 @@
 
 * 添加safeParseInt方法，将字符串转为数字类型 ([b1299c0](https://github.com/SeeMusic/fn/commit/b1299c0ba32d4f99ede64bec37612c03c68b4346))
 * 增加deepEqual方法，判断两个变量的值是否相等 ([ad4e666](https://github.com/SeeMusic/fn/commit/ad4e6664713a0abb21b7c63db868b372e0c5e2aa))
-* 增加deepEqualWithSomeKeys方法，判断两个对象的指定字段值是否相等 ([4bac864](https://github.com/SeeMusic/fn/commit/4bac8646858cd116a511b42002eade4b6ea7b522))
+* 增加deepEqualWithKeys方法，判断两个对象的指定字段值是否相等 ([4bac864](https://github.com/SeeMusic/fn/commit/4bac8646858cd116a511b42002eade4b6ea7b522))
 
 
 

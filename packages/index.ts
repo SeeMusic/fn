@@ -10,7 +10,7 @@ import markSensitiveData from './markSensitiveData';
 import filterEmptyParams from './filterEmptyParams';
 import findPath from './findPath';
 import deepEqual from './deepEqual';
-import deepEqualWithSomeKeys from './deepEqualWithSomeKeys';
+import deepEqualWithKeys from './deepEqualWithKeys';
 import safeparseInt from './safeparseInt';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
@@ -39,7 +39,7 @@ export {
   filterEmptyParams,
   findPath,
   deepEqual,
-  deepEqualWithSomeKeys,
+  deepEqualWithKeys,
   safeparseInt,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,

@@ -5,7 +5,7 @@ import { deepEqual, isObject } from '..';
  *
  * @example
  */
-const deepEqualWithSomeKeys = (x: Record<string, unknown>, y: Record<string, unknown>, keys: string[]) => {
+const deepEqualWithKeys = (x: Record<string, unknown>, y: Record<string, unknown>, keys: string[]) => {
   const _keys = keys.filter(key => Object.prototype.hasOwnProperty.call(x, key) || Object.prototype.hasOwnProperty.call(y, key));
   if (!_keys.length) {
     return deepEqual(x, y);
@@ -24,4 +24,4 @@ const deepEqualWithSomeKeys = (x: Record<string, unknown>, y: Record<string, unk
   return true;
 };
 
-export default deepEqualWithSomeKeys;
+export default deepEqualWithKeys;
