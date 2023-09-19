@@ -7,6 +7,7 @@ import { formatEmptyText } from '..';
  * nl2br('abc') -> 'abc'
  * nl2br('abc\ndef') -> 'abc<br>def'
  */
-const nl2br = (content: EmptyTextOriginValueType, placeholder = '-') => content ? content.replace(/\n/g, '<br>'): formatEmptyText(content, placeholder);
+const nl2br = (content: EmptyTextOriginValueType, placeholder = '-') =>
+  content ? content.replace(/\n/g, '<br>'): formatEmptyText(content, placeholder);
 
 export default nl2br;

@@ -11,7 +11,7 @@ import filterEmptyParams from './filterEmptyParams';
 import findPath from './findPath';
 import deepEqual from './deepEqual';
 import deepEqualWithKeys from './deepEqualWithKeys';
-import safeparseInt from './safeparseInt';
+import safeParseInt from './safeParseInt';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
@@ -40,7 +40,7 @@ export {
   findPath,
   deepEqual,
   deepEqualWithKeys,
-  safeparseInt,
+  safeParseInt,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
   checkEmail,
