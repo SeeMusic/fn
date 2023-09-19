@@ -10,7 +10,9 @@ import { EmptyTextOriginValueType } from '@packages/formatEmptyText/typing';
  * @docs https://day.js.org/docs/zh-CN/display/format
  */
 const formatIsoDate = (date: EmptyTextOriginValueType, formatter = 'YYYY.MM.DD', placeholder = '-'): string => {
-  return date ? dayjs(date).format(formatter): formatEmptyText(date, placeholder);
+  return date
+    ? dayjs(date).format(formatter)
+    : formatEmptyText(date, placeholder);
 };
 
 export default formatIsoDate;

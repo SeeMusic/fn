@@ -27,12 +27,13 @@ module.exports = {
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'never'],
     'object-curly-spacing': ['error','always'],
-    'keyword-spacing': [ 
+    'keyword-spacing': [
       'error', {
         before: true,
         after: true
       }
     ],
+    'no-trailing-spaces': 2,
     'eol-last': ['error', 'always'],
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }]
   }
