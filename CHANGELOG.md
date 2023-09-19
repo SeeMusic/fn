@@ -1,3 +1,21 @@
+# [0.9.0](https://github.com/SeeMusic/fn/compare/v0.8.0...v0.9.0) (2023-09-19)
+
+
+### Bug Fixes
+
+* formatIsoDate参数类型定义 ([ba82f9f](https://github.com/SeeMusic/fn/commit/ba82f9f6817206aa5510f768f9443714829b8599))
+* formatIsoDate参数为空，返回默认值 ([#23](https://github.com/SeeMusic/fn/issues/23)) ([cf2735e](https://github.com/SeeMusic/fn/commit/cf2735e2f762539aafac32bd059e3b1f71914885))
+* nl2br方法添加空值判断 ([0c2ee13](https://github.com/SeeMusic/fn/commit/0c2ee13f7f92e7c961cdef9676b3635a22e19e86))
+
+
+### Features
+
+* 添加safeParseInt方法，将字符串转为数字类型 ([b1299c0](https://github.com/SeeMusic/fn/commit/b1299c0ba32d4f99ede64bec37612c03c68b4346))
+* 增加deepEqual方法，判断两个变量的值是否相等 ([ad4e666](https://github.com/SeeMusic/fn/commit/ad4e6664713a0abb21b7c63db868b372e0c5e2aa))
+* 增加deepEqualWithSomeKeys方法，判断两个对象的指定字段值是否相等 ([4bac864](https://github.com/SeeMusic/fn/commit/4bac8646858cd116a511b42002eade4b6ea7b522))
+
+
+
 ## [0.8.1](https://github.com/SeeMusic/fn/compare/v0.8.0...v0.8.1) (2023-09-14)
 
 
