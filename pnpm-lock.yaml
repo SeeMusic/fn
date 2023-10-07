@@ -1,57 +1,64 @@
 lockfileVersion: '6.0'
 
-devDependencies:
-  '@commitlint/cli':
-    specifier: ^17.6.7
-    version: 17.6.7
-  '@commitlint/config-conventional':
-    specifier: ^17.6.7
-    version: 17.6.7
-  '@typescript-eslint/eslint-plugin':
-    specifier: ^6.2.0
-    version: 6.2.0(@typescript-eslint/parser@6.2.0)(eslint@8.45.0)(typescript@5.1.6)
-  '@typescript-eslint/parser':
-    specifier: ^6.2.0
-    version: 6.2.0(eslint@8.45.0)(typescript@5.1.6)
-  '@vitest/coverage-c8':
-    specifier: ^0.33.0
-    version: 0.33.0(vitest@0.33.0)
-  commitizen:
-    specifier: ^4.3.0
-    version: 4.3.0
-  cz-conventional-changelog:
-    specifier: ^3.3.0
-    version: 3.3.0
-  dayjs:
-    specifier: ^1.11.9
-    version: 1.11.9
-  dts-bundle-generator:
-    specifier: ^8.0.1
-    version: 8.0.1
-  eslint:
-    specifier: ^8.45.0
-    version: 8.45.0
-  husky:
-    specifier: ^8.0.3
-    version: 8.0.3
-  plop:
-    specifier: ^3.1.2
-    version: 3.1.2
-  typescript:
-    specifier: ^5.1.6
-    version: 5.1.6
-  vite:
-    specifier: ^4.4.5
-    version: 4.4.5(@types/node@20.4.2)
-  vitepress:
-    specifier: 1.0.0-beta.5
-    version: 1.0.0-beta.5(@types/node@20.4.2)(search-insights@2.7.0)
-  vitest:
-    specifier: ^0.33.0
-    version: 0.33.0
-  vue:
-    specifier: ^3.3.4
-    version: 3.3.4
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      '@commitlint/cli':
+        specifier: ^17.6.7
+        version: 17.6.7
+      '@commitlint/config-conventional':
+        specifier: ^17.6.7
+        version: 17.6.7
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.2.0
+        version: 6.2.0(@typescript-eslint/parser@6.2.0)(eslint@8.45.0)(typescript@5.1.6)
+      '@typescript-eslint/parser':
+        specifier: ^6.2.0
+        version: 6.2.0(eslint@8.45.0)(typescript@5.1.6)
+      '@vitest/coverage-c8':
+        specifier: ^0.33.0
+        version: 0.33.0(vitest@0.33.0)
+      commitizen:
+        specifier: ^4.3.0
+        version: 4.3.0
+      cz-conventional-changelog:
+        specifier: ^3.3.0
+        version: 3.3.0
+      dayjs:
+        specifier: ^1.11.9
+        version: 1.11.9
+      dts-bundle-generator:
+        specifier: ^8.0.1
+        version: 8.0.1
+      eslint:
+        specifier: ^8.45.0
+        version: 8.45.0
+      husky:
+        specifier: ^8.0.3
+        version: 8.0.3
+      plop:
+        specifier: ^3.1.2
+        version: 3.1.2
+      typescript:
+        specifier: ^5.1.6
+        version: 5.1.6
+      vite:
+        specifier: ^4.4.5
+        version: 4.4.5(@types/node@20.4.2)
+      vitepress:
+        specifier: 1.0.0-beta.5
+        version: 1.0.0-beta.5(@types/node@20.4.2)(search-insights@2.7.0)
+      vitest:
+        specifier: ^0.33.0
+        version: 0.33.0
+      vue:
+        specifier: ^3.3.4
+        version: 3.3.4
 
 packages:
 
@@ -1105,7 +1112,7 @@ packages:
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
       magic-string: 0.30.1
-      postcss: 8.4.26
+      postcss: 8.4.31
       source-map-js: 1.0.2
     dev: true
 
@@ -3362,8 +3369,8 @@ packages:
       v8flags: 4.0.0
     dev: true
 
-  /postcss@8.4.26:
-    resolution: {integrity: sha512-jrXHFF8iTloAenySjM/ob3gSj7pCu0Ji49hnjqzsgSRa50hkWCKD0HQ+gMNJkW38jBI68MpAAg7ZWwHwX8NMMw==}
+  /postcss@8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.6
@@ -4058,7 +4065,7 @@ packages:
     dependencies:
       '@types/node': 20.4.2
       esbuild: 0.18.15
-      postcss: 8.4.26
+      postcss: 8.4.31
       rollup: 3.26.3
     optionalDependencies:
       fsevents: 2.3.2
@@ -4094,7 +4101,7 @@ packages:
     dependencies:
       '@types/node': 20.4.2
       esbuild: 0.18.15
-      postcss: 8.4.26
+      postcss: 8.4.31
       rollup: 3.26.3
     optionalDependencies:
       fsevents: 2.3.2
@@ -4353,7 +4360,3 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
