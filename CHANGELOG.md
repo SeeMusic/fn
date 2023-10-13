@@ -1,3 +1,18 @@
+## [0.9.2](https://github.com/SeeMusic/fn/compare/v0.8.0...v0.9.2) (2023-10-13)
+
+
+### Bug Fixes
+
+* filterEmptyParams 新增排除字段 ([53a5c1d](https://github.com/SeeMusic/fn/commit/53a5c1d4e67dec0fd3773302ba31ec589b3ae558))
+* formatIsoDate参数为空，返回默认值 ([#23](https://github.com/SeeMusic/fn/issues/23)) ([cf2735e](https://github.com/SeeMusic/fn/commit/cf2735e2f762539aafac32bd059e3b1f71914885))
+
+
+### Features
+
+* 增加 deepEqual | deepEqualWithKeys | safeParseInt 方法 ([#24](https://github.com/SeeMusic/fn/issues/24)) ([247f54c](https://github.com/SeeMusic/fn/commit/247f54c9a60773a5ded9f150d4dd1b59f4ccc856))
+
+
+
 # [0.9.0](https://github.com/SeeMusic/fn/compare/v0.8.0...v0.9.0) (2023-09-19)
 
 

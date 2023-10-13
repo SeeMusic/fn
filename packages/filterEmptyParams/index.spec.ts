@@ -21,9 +21,11 @@ describe('filterEmptyParams', () => {
   });
 
   it('options', () => {
-    expect(filterEmptyParams({ foo: '', arr: [], obj: {} }, {})).toStrictEqual({});
-    expect(filterEmptyParams({ foo: '', arr: [], obj: {} }, { filterEmptyString: false })).toStrictEqual({ foo: '' });
-    expect(filterEmptyParams({ foo: '', arr: [], obj: {} }, { filtersEmptyArray: false })).toStrictEqual({ arr: [] });
-    expect(filterEmptyParams({ foo: '', arr: [], obj: {} }, { filtersEmptyObject: false })).toStrictEqual({ obj: {} });
+    const obj = { foo: '', arr: [], obj: {} };
+    expect(filterEmptyParams(obj, {})).toStrictEqual({});
+    expect(filterEmptyParams(obj, { filterEmptyString: false })).toStrictEqual({ foo: '' });
+    expect(filterEmptyParams(obj, { filtersEmptyArray: false })).toStrictEqual({ arr: [] });
+    expect(filterEmptyParams(obj, { filtersEmptyObject: false })).toStrictEqual({ obj: {} });
+    expect(filterEmptyParams(obj, { excludes: ['foo', 'obj'] })).toStrictEqual({ foo: '', obj: {} });
   });
 });
