@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/SeeMusic/fn/compare/v0.9.2...v0.10.0) (2023-10-16)
+
+
+### Features
+
+* add deepClone ([ca2fcf0](https://github.com/SeeMusic/fn/commit/ca2fcf060da7ba1db55aba48fa4a6fabf08e25b3))
+
+
+
 ## [0.9.2](https://github.com/SeeMusic/fn/compare/v0.8.0...v0.9.2) (2023-10-13)
 
 
