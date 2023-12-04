@@ -15,7 +15,7 @@ const safeParseInt = (target: EmptyTextOriginValueType, defaultValue: string | n
     if (isString(target)) {
       const unsignedString = target.replace(/^-([^-]+)/g,'$1');
       const maxStr = Number.MAX_SAFE_INTEGER.toString();
-      if (unsignedString.length > maxStr.length || unsignedString > maxStr) {
+      if (unsignedString.length > maxStr.length || (unsignedString.length >= maxStr.length && unsignedString > maxStr)) {
         return defaultValue;
       }
     }

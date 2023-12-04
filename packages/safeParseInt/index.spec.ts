@@ -30,5 +30,7 @@ describe('safeParseInt', () => {
     expect(safeParseInt('19007199254740991')).toBe(0);
     expect(safeParseInt('-9007199254740992')).toBe(0);
     expect(safeParseInt('-19007199254740991')).toBe(0);
+    expect(safeParseInt('99')).toBe(99);
+    expect(safeParseInt('-999')).toBe(-999);
   });
 });
