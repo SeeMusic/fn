@@ -1,3 +1,17 @@
+# [0.11.0](https://github.com/SeeMusic/fn/compare/v0.10.0...v0.11.0) (2023-12-04)
+
+
+### Bug Fixes
+
+* safeParseInt 字符串大小比较 ([e256504](https://github.com/SeeMusic/fn/commit/e256504df5b3cdff6256e5ef58639f5a8da2acfe))
+
+
+### Features
+
+* add checkoutAccount ([2c95d7b](https://github.com/SeeMusic/fn/commit/2c95d7bc21be6292b8c0d5b1ec8b06bf71eb1f2d))
+
+
+
 # [0.10.0](https://github.com/SeeMusic/fn/compare/v0.9.2...v0.10.0) (2023-10-16)
 
 
