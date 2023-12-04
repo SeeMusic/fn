@@ -13,6 +13,7 @@ import deepEqual from './deepEqual';
 import deepEqualWithKeys from './deepEqualWithKeys';
 import safeParseInt from './safeParseInt';
 import deepClone from './deepClone';
+import checkAccount from './checkAccount';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
@@ -43,6 +44,7 @@ export {
   deepEqualWithKeys,
   safeParseInt,
   deepClone,
+  checkAccount,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
   checkEmail,
