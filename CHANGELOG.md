@@ -1,3 +1,12 @@
+# [0.12.0](https://github.com/SeeMusic/fn/compare/v0.11.0...v0.12.0) (2024-01-04)
+
+
+### Features
+
+* add createFaviconForSaaS ([bd00177](https://github.com/SeeMusic/fn/commit/bd001774ecf2f8f8af493c9d87f7534adec84370))
+
+
+
 # [0.11.0](https://github.com/SeeMusic/fn/compare/v0.10.0...v0.11.0) (2023-12-04)
 
 

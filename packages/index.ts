@@ -14,6 +14,7 @@ import deepEqualWithKeys from './deepEqualWithKeys';
 import safeParseInt from './safeParseInt';
 import deepClone from './deepClone';
 import checkAccount from './checkAccount';
+import createFaviconForSaaS from './createFaviconForSaaS';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
@@ -45,6 +46,7 @@ export {
   safeParseInt,
   deepClone,
   checkAccount,
+  createFaviconForSaaS,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
   checkEmail,
