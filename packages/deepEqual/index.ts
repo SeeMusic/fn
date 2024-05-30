@@ -41,7 +41,12 @@ const deepEqual = (x: unknown, y: unknown) => {
     return (x as Date).getTime() === (y as Date).getTime();
   } else if (getType(x) === 'Symbol' && getType(y) === 'Symbol') { // Symbol
     return (x as symbol).toString() === (y as symbol).toString();
-  } else {  
+  } else if (getType(x) === 'RegExp' && getType(y) === 'RegExp') { // RegExp
+    return (x as RegExp).toString() === (y as RegExp).toString();
+  } else if (getType(x) === 'Function' && getType(y) === 'Function') { // RegExp
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    return (x as Function).toString() === (y as Function).toString();
+  } else {
     return false;
   }
 };

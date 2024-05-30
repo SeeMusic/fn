@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { deepClone, deepEqual } from '..';
+import { deepClone, deepEqual, getType } from '..';
+import { deepCopyFunction } from '.';
 
 describe('deepClone', () => {
 
@@ -14,6 +15,15 @@ describe('deepClone', () => {
 
   it('array', () => {
     expect(deepEqual(deepClone(['foo', 'bar']), ['foo', 'bar'])).eq(true);
+    const arr = ['foo', 'bar', { name: 'baz' }];
+    const copiedArr = deepClone(arr);
+    copiedArr[0] = 'foo-bar';
+    copiedArr[2].name = 'baz-bar';
+    expect(deepEqual(arr, ['foo', 'bar', { name: 'baz' }])).eq(true);
+    const reg = { regexp: /\d+/g };
+    expect(deepEqual(reg, deepClone(reg))).eq(true);
+    const foo = (a: number, b: number) => a + b;
+    expect(deepEqual(foo, deepClone(foo))).eq(true);
   });
 
   it('Date', () => {
