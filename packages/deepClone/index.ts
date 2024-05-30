@@ -7,19 +7,30 @@
 import { isObject } from '..';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const deepClone = (target: any, hash = new WeakMap()) => {
+const deepClone = (target: any, hash = new WeakMap()): typeof target => {
   if (target instanceof Date) { return new Date(target); }
 
-  if (!isObject(target)) { return target; }
+  if (target instanceof RegExp) { return new RegExp(target); }
 
-  if (hash.get(target)) { return hash.get(target); }
-  const cloneTarget = new target.constructor();
-  hash.set(target, cloneTarget);
+  if (target instanceof Array) {
+    return target.map((item) => deepClone(item, hash));
+  }
 
-  Reflect.ownKeys(target).forEach((key) => {
-    cloneTarget[key] = deepClone(target[key], hash);
-  });
-  return cloneTarget;
+  if (target instanceof Function) {
+    return new Function('return ' + target.toString())();
+  }
+
+  if (isObject(target)) {
+    if (hash.get(target)) { return hash.get(target); }
+    const cloneTarget = new target.constructor();
+    hash.set(target, cloneTarget);
+
+    Reflect.ownKeys(target).forEach((key) => {
+      cloneTarget[key] = deepClone(target[key], hash);
+    });
+    return cloneTarget;
+  }
+  return target;
 };
 
 export default deepClone;
