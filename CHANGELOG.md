@@ -1,3 +1,12 @@
+## [0.12.1](https://github.com/SeeMusic/fn/compare/v0.12.0...v0.12.1) (2024-05-30)
+
+
+### Bug Fixes
+
+* update deepClone, deepEqual to appropriate for type of Array, RegExp and Function ([077d93f](https://github.com/SeeMusic/fn/commit/077d93f8af376cd3bc270db79ad2590b888bc89e))
+
+
+
 # [0.12.0](https://github.com/SeeMusic/fn/compare/v0.11.0...v0.12.0) (2024-01-04)
 
 
