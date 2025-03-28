@@ -15,7 +15,6 @@ import safeParseInt from './safeParseInt';
 import deepClone from './deepClone';
 import checkAccount from './checkAccount';
 import createFaviconForSaaS from './createFaviconForSaaS';
-// IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 import checkPhoneNumber from './checkPhoneNumber';
 import checkEmail from './checkEmail';
 import {
@@ -28,8 +27,12 @@ import {
   isNull,
   isEmpty
 } from './objectIs';
+import initChatwootClient from './initChatwootClient';
+import setChatwootUser from './setChatwootUser';
+// IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 
 export {
+  // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   formatEmptyText,
   formatLrcTimeTag,
   formatSeconds,
@@ -47,10 +50,8 @@ export {
   deepClone,
   checkAccount,
   createFaviconForSaaS,
-  // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   checkPhoneNumber,
   checkEmail,
-
   getType,
   isString,
   isNumber,
@@ -58,5 +59,7 @@ export {
   isObject,
   isUndefined,
   isNull,
-  isEmpty
+  isEmpty,
+  initChatwootClient,
+  setChatwootUser
 };

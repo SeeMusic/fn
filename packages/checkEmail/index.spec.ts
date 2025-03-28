@@ -28,7 +28,7 @@ describe('checkEmail', () => {
     expect(checkEmail('zhangsan+1@kanjian.com')).toBe(true);
     expect(checkEmail('zhangsan+100@kanjian.com')).toBe(true);
     expect(checkEmail('zhangsan@kanjian+.com')).toBe(false);
-    
+
   });
   it('自定义规则', () => {
     expect(checkEmail('zhangsan@kanjian.com', /^[a-zA-Z0-9]+@([a-zA-Z0-9]+\.)+com$/)).toBe(true);
