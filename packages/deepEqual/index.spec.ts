@@ -32,7 +32,7 @@ describe('deepEqual', () => {
     expect(deepEqual(new Date('2023-8-31'), new Date('2023-8-31'))).eq(true);
     expect(deepEqual(new Date('2023-8-30'), new Date('2023-8-31'))).eq(false);
   });
-  
+
   it('Object', () => {
     expect(deepEqual({ foo: 'foo', bar: { name: 'bar' } }, { foo: 'foo', bar: { name: 'bar' } })).eq(true);
     expect(deepEqual({ foo: 'foo', bar: { name: 'foo' } }, { foo: 'foo', bar: { name: 'bar' } })).eq(false);

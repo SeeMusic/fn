@@ -10,7 +10,7 @@ const deepEqualWithKeys = (x: Record<string, unknown>, y: Record<string, unknown
   if (!_keys.length) {
     return deepEqual(x, y);
   }
-  
+
   if (isObject(x) && isObject(y)) {
     for (const key of _keys) {
       if (!deepEqual(x[key], y[key])) {

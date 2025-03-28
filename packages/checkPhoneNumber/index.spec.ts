@@ -21,7 +21,7 @@ describe.only('checkPhoneNumber', () => {
     expect(checkPhoneNumber('1505657289')).toBe(false);
     expect(checkPhoneNumber('15x5657289')).toBe(false);
   });
-  
+
   it('自定义规则', () => {
     expect(checkPhoneNumber('150-5657-9829', /^1[3-9][0-9]-[0-9]{4}-([0-9]{4})$/)).toBe(true);
     expect(checkPhoneNumber('100-5657-9829', /^1[3-9][0-9]-[0-9]{4}-([0-9]{4})$/)).toBe(false);

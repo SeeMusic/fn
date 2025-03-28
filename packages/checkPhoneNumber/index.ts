@@ -1,8 +1,8 @@
 /**
  * 手机号/固定电话 测试函数
- * @param {string} value 手机号/固定电话 
+ * @param {string} value 手机号/固定电话
  * @param {RegExp} rule 自定义校验规则
- * 默认规则：国内手机号 +861XXXXXXXXX，861XXXXXXXXX，1XXXXXXXXX， 
+ * 默认规则：国内手机号 +861XXXXXXXXX，861XXXXXXXXX，1XXXXXXXXX，
  *         国内固定电话 +86021-63570107，86021-63570107，021-63570107，+860536-7210654， 860536-7210654， 0536-7210654
  */
 const checkPhoneNumber = (value: string, rule?: RegExp) => {

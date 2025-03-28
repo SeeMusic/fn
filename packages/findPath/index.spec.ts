@@ -5,7 +5,7 @@ import findPath from './index';
 interface TreeChild {
     [child: string]: TreeNode[] | undefined;
   }
-  
+
 interface TreeNode {
   [key: string]: TreeChild | string | number;
 }

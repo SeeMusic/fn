@@ -9,7 +9,7 @@ interface TreeNode {
 interface Params {
   key: string;
   value: string | number;
-  childrenKey: string; 
+  childrenKey: string;
   tree: TreeNode[];
 }
 
