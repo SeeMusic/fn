@@ -1,6 +1,8 @@
 # setChatwootUser
 传递当前登录用户信息给 chatwoot 客户端
 
+> 前置依赖：`initChatwootClient` 函数初始化 Chatwoot 客户端
+
 ## 使用方法
 
 ```ts

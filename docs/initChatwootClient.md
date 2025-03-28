@@ -29,3 +29,6 @@ initChatwootClient({
 
 - 仅限浏览器环境使用
 - 执行后，chatwoot 的 SDK 会暴漏一些内部的高阶方法，参见 [官方文档](https://www.chatwoot.com/hc/user-guide/articles/1677587234-how-to-send-additional-user-information-to-chatwoot-using-sdk)
+
+## 其他
+目前关联的有 `setChatwootUser` 的函数，可以设置用户信息，参见对应的函数说明。
