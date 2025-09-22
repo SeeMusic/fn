@@ -31,6 +31,11 @@ const replaceIconWithImg = (locale: 'zh-CN' | 'en-US' | 'ja-JP') => {
 const setChatwootIcon = (locale: 'zh-CN' | 'en-US' | 'ja-JP') => {
   if (typeof window === 'undefined') return;
 
+  if (window.$chatwoot) {
+    replaceIconWithImg(locale);
+    return;
+  }
+
   window.addEventListener(
     'chatwoot:ready',
     () => replaceIconWithImg(locale),
