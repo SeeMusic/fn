@@ -48,4 +48,4 @@ declare global {
 }
 
 // 确保这个文件被视为一个模块
-export {}
+export {};

@@ -29,6 +29,7 @@ import {
 } from './objectIs';
 import initChatwootClient from './initChatwootClient';
 import setChatwootUser from './setChatwootUser';
+import setChatwootIcon from './setChatwootIcon';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 
 export {
@@ -61,5 +62,6 @@ export {
   isNull,
   isEmpty,
   initChatwootClient,
+  setChatwootIcon,
   setChatwootUser
 };
