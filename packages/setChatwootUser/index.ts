@@ -7,13 +7,15 @@ import type { ChatwootUser } from '../initChatwootClient/typing';
  * @param user - 用户信息
  */
 const setChatwootUser = (id: string | number, user: ChatwootUser) => {
-  if (typeof window === 'undefined' || !window.$chatwoot) return false;
+  if (typeof window === 'undefined') return;
 
   window.addEventListener('chatwoot:ready', function() {
     window.$chatwoot?.setUser(id, user);
-  });
+  }, { once: true });
 
-  return true;
+  if (window.$chatwoot) {
+    window.$chatwoot.setUser(id, user);
+  }
 };
 
 export default setChatwootUser;
