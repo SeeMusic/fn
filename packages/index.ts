@@ -30,9 +30,11 @@ import {
 import initChatwootClient from './initChatwootClient';
 import setChatwootUser from './setChatwootUser';
 import setChatwootIcon from './setChatwootIcon';
+import downloadWithMime from './downloadWithMime';
 // IMPORT_PLACEHOLDER--DO_NOT_REMOVE
 
 export {
+  downloadWithMime,
   // EXPORT_PLACEHOLDER--DO_NOT_REMOVE
   formatEmptyText,
   formatLrcTimeTag,
